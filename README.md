@@ -2,7 +2,7 @@
 
 ## How to use
 
-Download the example [or clone the repo]('https://github.com/JonathanSeehagen/nextjs-typescript-material-ui-styled-components):
+Download the example [or clone the repo](https://github.com/JonathanSeehagen/nextjs-typescript-material-ui-styled-components):
 
 Install it and run:
 
@@ -13,5 +13,5 @@ yarn dev
 
 References: 
 
-[]('https://github.com/mui-org/material-ui')
-[]('https://github.com/nblthree/nextjs-with-material-ui-and-styled-components/blob/master/.babelrc')
+[](https://github.com/mui-org/material-ui)
+[](https://github.com/nblthree/nextjs-with-material-ui-and-styled-components/blob/master/.babelrc)
