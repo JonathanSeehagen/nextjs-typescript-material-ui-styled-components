@@ -67,6 +67,3 @@ export default class MyDocument extends Document {
     )
   }
 }
-
-//https://github.com/nblthree/nextjs-with-material-ui-and-styled-components/blob/master/.babelrc
-//https://github.com/mui-org/material-ui
