@@ -17,7 +17,7 @@ export default function Index() {
         <title>Main Page</title>
       </Head>
       <Container maxWidth="sm">
-        <Box alignItems="center" sx={{ m: 4 }}>
+        <Box sx={{ m: 2 }}>
           <Typography variant="h4" component="h1" align="center">
             Next.js with TypeScript, Material-UI and Styled-Components
           </Typography>
