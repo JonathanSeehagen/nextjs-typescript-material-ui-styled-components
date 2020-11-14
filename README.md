@@ -4,14 +4,16 @@
 
 Download the example [or clone the repo.](https://github.com/JonathanSeehagen/nextjs-typescript-material-ui-styled-components)
 
-Install it and run:
+*You must have the EditorConfig extension pre-installed
+
+In terminal install it and run:
 
 ```sh
 yarn
 yarn dev
 ```
 
-References: 
+References:
 
 - [https://github.com/mui-org/material-ui](https://github.com/mui-org/material-ui)
 
