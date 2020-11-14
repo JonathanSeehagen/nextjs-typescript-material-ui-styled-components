@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Document, {
   DocumentInitialProps,
   DocumentContext,
@@ -6,27 +6,30 @@ import Document, {
   Head,
   Main,
   NextScript,
-} from 'next/document'
-import { ServerStyleSheets } from '@material-ui/core/styles';
+} from "next/document";
+import { ServerStyleSheets } from "@material-ui/core/styles";
 
-import { ServerStyleSheet } from 'styled-components'
-import MuiTheme from '../styles/MuiTheme';
+import { ServerStyleSheet } from "styled-components";
+import MuiTheme from "../styles/MuiTheme";
 
 export default class MyDocument extends Document {
   static async getInitialProps(
-    ctx: DocumentContext
+    ctx: DocumentContext,
   ): Promise<DocumentInitialProps> {
-    const styledComponentsSheet = new ServerStyleSheet()
-    const materialSheets = new ServerStyleSheets()
-    const originalRenderPage = ctx.renderPage
+    const styledComponentsSheet = new ServerStyleSheet();
+    const materialSheets = new ServerStyleSheets();
+    const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) => styledComponentsSheet.collectStyles(materialSheets.collect(<App {...props} />))
-        })
+          enhanceApp: (App) => (props) =>
+            styledComponentsSheet.collectStyles(
+              materialSheets.collect(<App {...props} />),
+            ),
+        });
 
-      const initialProps = await Document.getInitialProps(ctx)
+      const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
         styles: (
@@ -36,9 +39,9 @@ export default class MyDocument extends Document {
             {materialSheets.getStyleElement()}
           </>
         ),
-      }
+      };
     } finally {
-      styledComponentsSheet.seal()
+      styledComponentsSheet.seal();
     }
   }
 
@@ -49,10 +52,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
 
           {/* PWA primary color */}
-          <meta
-            name="muitheme-color"
-            content={MuiTheme.palette.primary.main}
-          />
+          <meta name="muitheme-color" content={MuiTheme.palette.primary.main} />
 
           <link
             rel="stylesheet"
@@ -64,6 +64,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }

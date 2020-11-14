@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
-import ProTip from '../ProTip';
-import Copyright from '../Copyright';
-import { LinkStyle } from '../styles/pages/about';
+import ProTip from "../ProTip";
+import Copyright from "../Copyright";
+import { LinkStyle } from "../styles/pages/about";
 
-export default function About() {
+const About: React.FC = () => {
   return (
     <>
       <Head>
@@ -21,9 +21,7 @@ export default function About() {
             Next.js with TypeScript, Material-UI and Styled-Components
           </Typography>
           <Link href="/">
-            <LinkStyle>
-              {"<-- Back to the main page"}
-            </LinkStyle>
+            <LinkStyle>{"<-- Back to the main page"}</LinkStyle>
           </Link>
           <ProTip />
           <Copyright />
@@ -31,4 +29,6 @@ export default function About() {
       </Container>
     </>
   );
-}
+};
+
+export default About;

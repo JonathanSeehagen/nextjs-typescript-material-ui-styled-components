@@ -1,16 +1,16 @@
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
-import ProTip from '../ProTip';
-import Copyright from '../Copyright';
+import ProTip from "../ProTip";
+import Copyright from "../Copyright";
 
-import { LinkStyle } from '../styles/pages/home';
+import { LinkStyle } from "../styles/pages/home";
 
-export default function Index() {
+const Index: React.FC = () => {
   return (
     <>
       <Head>
@@ -22,9 +22,7 @@ export default function Index() {
             Next.js with TypeScript, Material-UI and Styled-Components
           </Typography>
           <Link href="/about">
-            <LinkStyle>
-              {"Go to the about page -->"}
-            </LinkStyle>
+            <LinkStyle>{"Go to the about page -->"}</LinkStyle>
           </Link>
           <ProTip />
           <Copyright />
@@ -32,4 +30,6 @@ export default function Index() {
       </Container>
     </>
   );
-}
+};
+
+export default Index;

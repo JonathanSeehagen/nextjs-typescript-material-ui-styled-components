@@ -1,14 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { AppProps } from 'next/app';
-import { ThemeProvider } from '@material-ui/core'
+import React from "react";
+import Head from "next/head";
+import { AppProps } from "next/app";
+import { ThemeProvider } from "@material-ui/core";
 
-import MuiTheme from '../styles/MuiTheme';
-import CreateGlobalStyle from '../styles/GlobalStyle';
+import MuiTheme from "../styles/MuiTheme";
+import CreateGlobalStyle from "../styles/GlobalStyle";
 
-export default function MyApp(props: AppProps) {
-  const { Component, pageProps } = props;
-
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -21,4 +19,6 @@ export default function MyApp(props: AppProps) {
       </ThemeProvider>
     </>
   );
-}
+};
+
+export default MyApp;
